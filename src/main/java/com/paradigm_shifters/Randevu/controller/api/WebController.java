@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -32,6 +33,13 @@ public class WebController {
     	CurrentDate todaysDateInformation = new CurrentDate();
     	String fullDateInfo = todaysDateInformation.getFullDateString();
     	return fullDateInfo;
+    }
+    
+    @RequestMapping("/jason")
+    public ModelAndView hijason() {
+        ModelAndView model = new ModelAndView("JasonPage")
+        model.addObject("msg", "Hi, Jason");
+        return model;
     }
     
     @RequestMapping("/html_parser")
