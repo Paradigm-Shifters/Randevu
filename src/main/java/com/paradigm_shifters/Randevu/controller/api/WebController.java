@@ -2,6 +2,7 @@ package com.paradigm_shifters.Randevu.controller.api;
 
 import com.paradigm_shifters.Randevu.model.SampleHTMLParser;
 import com.paradigm_shifters.Randevu.model.SampleResponse;
+import com.paradigm_shifters.Randevu.model.CurrentDate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,14 @@ public class WebController {
         response.setMessage("Your name is " + name);
         return response;
     }
+    
+    @RequestMapping("/date")
+    public String getTodaysDate() {
+    	CurrentDate todaysDateInformation = new CurrentDate();
+    	String fullDateInfo = todaysDateInformation.getFullDateString();
+    	return fullDateInfo;
+    }
+    
     @RequestMapping("/html_parser")
     public String SampleHTML() {
         Document doc;
