@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>HTML Parser</title>
+    <link rel="stylesheet" th:href="@{/styles.css}" />
 </head>
 <body>
-<h1>Hello World</h1>
-<div>Another hello world page</div>
+<p th:t_title="${t_title.text}"></p>
+<p th:l_link="${t_title.text}"></p>
+<p th:t_text="${t_title.text}"></p>
 
 </body>
 </html>
