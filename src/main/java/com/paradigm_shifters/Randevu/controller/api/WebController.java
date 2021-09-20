@@ -37,17 +37,17 @@ public class WebController {
 
             // get page title
             title = doc.title();
-            System.out.println("title : " + title);
+//            System.out.println("title : " + title);
 
             // get all links
             links = doc.select("a[href]");
-            for (Element link : links) {
-
-                // get the value from href attribute
-                System.out.println("\nlink : " + link.attr("href"));
-                System.out.println("\ntext : " + link.text());
-
-            }
+//            for (Element link : links) {
+//
+//                // get the value from href attribute
+//                System.out.println("\nlink : " + link.attr("href"));
+//                System.out.println("\ntext : " + link.text());
+//
+//            }
 
         } catch (IOException e) {
             e.printStackTrace();
