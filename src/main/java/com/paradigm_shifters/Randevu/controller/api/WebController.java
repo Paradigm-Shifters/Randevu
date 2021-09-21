@@ -41,7 +41,7 @@ public class WebController {
     
     @RequestMapping("/jason")
     public ModelAndView hijason() {
-        ModelAndView model = new ModelAndView("JasonPage")
+        ModelAndView model = new ModelAndView("JasonPage");
         model.addObject("msg", "Hi, Jason");
         return model;
     }
