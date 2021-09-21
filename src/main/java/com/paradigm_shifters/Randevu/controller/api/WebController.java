@@ -96,4 +96,3 @@ public class WebController {
     	
     }
 }
->>>>>>> 030072a (Added Apachi Commons Codec dependency to pom.xml and new method that uses this dependency.)
