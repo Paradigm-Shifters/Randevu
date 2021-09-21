@@ -88,9 +88,9 @@ public class WebController {
     	String md5Hex = DigestUtils.md5Hex(text).toUpperCase();
     	String sha1Hex = DigestUtils.sha1Hex(text).toUpperCase();
     	String sha512Hex = DigestUtils.sha512Hex(text).toUpperCase();
-    	String temp = "The hex of the MD5 hash of " + text + " is " + md5Hex +
-    			"<br>The hex of the SHA1 hash of " + text + " is " + sha1Hex +
-    			"<br>The hex of the SHA512 hash of " + text + " is " + sha512Hex +
+    	String temp = "The hex of the MD5 hash of " + "'" + text + "'" + " is " + md5Hex +
+    			"<br>The hex of the SHA1 hash of " + "'" + text + "'" + " is " + sha1Hex +
+    			"<br>The hex of the SHA512 hash of " + "'" + text + "'" + " is " + sha512Hex +
     			"<br><br> <h1>This is why you should always be aware of what methods of encryption you use! </h1>";
     	return temp;
     	
