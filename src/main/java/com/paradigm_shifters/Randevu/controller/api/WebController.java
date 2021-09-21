@@ -5,6 +5,7 @@ import com.paradigm_shifters.Randevu.model.SampleResponse;
 import com.paradigm_shifters.Randevu.model.CurrentDate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,10 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import org.apache.commons.codec.digest.DigestUtils;
+
 import java.io.IOException;
+import java.util.Arrays;
 
 @RestController
 public class WebController {
@@ -76,4 +80,20 @@ public class WebController {
         return t_title + "</br>" + l_link + "</br>" + t_text;
 
     }
+    
+    @RequestMapping("/hash/{text}")
+    public String quickHash(@PathVariable String text) {
+    	//direct md5 hash cannot be displayed by browser, hex can
+    	//String md5 = new String(DigestUtils.md5(text));
+    	String md5Hex = DigestUtils.md5Hex(text).toUpperCase();
+    	String sha1Hex = DigestUtils.sha1Hex(text).toUpperCase();
+    	String sha512Hex = DigestUtils.sha512Hex(text).toUpperCase();
+    	String temp = "The hex of the MD5 hash of " + text + " is " + md5Hex +
+    			"<br>The hex of the SHA1 hash of " + text + " is " + sha1Hex +
+    			"<br>The hex of the SHA512 hash of " + text + " is " + sha512Hex +
+    			"<br><br> <h1>This is why you should always be aware of what methods of encryption you use! </h1>";
+    	return temp;
+    	
+    }
 }
+>>>>>>> 030072a (Added Apachi Commons Codec dependency to pom.xml and new method that uses this dependency.)
