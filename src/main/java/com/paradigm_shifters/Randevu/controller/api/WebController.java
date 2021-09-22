@@ -40,7 +40,7 @@ public class WebController {
         @RequestMapping("/Joseph")
     public Jhello greetings()
     {
-  	
+  	    Jhello Greet = new Jhello(); 
         return Greet;
     }
     
