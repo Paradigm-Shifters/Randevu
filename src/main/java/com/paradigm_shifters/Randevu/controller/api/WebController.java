@@ -37,10 +37,10 @@ public class WebController {
     	String fullDateInfo = todaysDateInformation.getFullDateString();
     	return fullDateInfo;
     }
-        @RequestMapping("/Joseph")
-    public Jhello greetings()
+    @RequestMapping("/Joseph")
+    public String greetings()
     {
-  	    Jhello Greet = new Jhello(); 
+  	    String Greet = "Hello Welcome to Randevu";
         return Greet;
     }
     
