@@ -37,6 +37,12 @@ public class WebController {
     	String fullDateInfo = todaysDateInformation.getFullDateString();
     	return fullDateInfo;
     }
+        @RequestMapping("/Joseph")
+    public Jhello greetings()
+    {
+  	
+        return Greet;
+    }
     
     @RequestMapping("/jason")
     public String hijason() {
