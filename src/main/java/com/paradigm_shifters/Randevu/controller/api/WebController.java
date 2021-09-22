@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.ModelAndView;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -40,10 +39,8 @@ public class WebController {
     }
     
     @RequestMapping("/jason")
-    public ModelAndView hijason() {
-        ModelAndView model = new ModelAndView("JasonPage");
-        model.addObject("msg", "Hi, Jason");
-        return model;
+    public String hijason() {
+        return "Hi, Jason";
     }
     
     @RequestMapping("/html_parser")
