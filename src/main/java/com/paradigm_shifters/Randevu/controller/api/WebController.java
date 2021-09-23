@@ -16,6 +16,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.math3.distribution.NormalDistribution;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -47,6 +48,13 @@ public class WebController {
     @RequestMapping("/jason")
     public String hijason() {
         return "Hi, Jason";
+    }
+    
+    @RequestMapping("/random_value")
+    public String randVal() {
+    	NormalDistribution normalDistribution = new NormalDistribution(10, 3);
+    	double randomValue = normalDistribution.sample();
+    	return ("The random value is: " + randomValue);
     }
     
     @RequestMapping("/html_parser")
