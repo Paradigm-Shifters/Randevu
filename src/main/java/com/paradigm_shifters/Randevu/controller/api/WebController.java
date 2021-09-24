@@ -17,6 +17,7 @@ import org.jsoup.select.Elements;
 
 import org.apache.commons.codec.digest.DigestUtils;
 import org.apache.commons.math3.distribution.NormalDistribution;
+import org.apache.commons.math3.stat.descriptive.DescriptiveStatistics;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -106,4 +107,17 @@ public class WebController {
     	return temp;
     	
     }
+        //Joseph A2 p2
+  	double[] values = new double[] {65, 51 , 16, 11 , 6519, 191 ,0 , 98, 19854, 1, 32};{
+  DescriptiveStatistics descriptiveStatistics = new DescriptiveStatistics();	
+  	for (double v : values) {
+  		descriptiveStatistics.addValue(v);
+  	}
+  	
+  	double mean = descriptiveStatistics.getMean();
+  	double median = descriptiveStatistics.getPercentile(50);
+  	double standardDeviation = descriptiveStatistics.getStandardDeviation();
+  	}
+}
+
 }
