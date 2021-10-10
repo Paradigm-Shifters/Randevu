@@ -118,6 +118,5 @@ public class WebController {
   	double median = descriptiveStatistics.getPercentile(50);
   	double standardDeviation = descriptiveStatistics.getStandardDeviation();
   	}
-}
-
+  	
 }
