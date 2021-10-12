@@ -1,5 +1,4 @@
 package com.paradigm_shifters.Randevu.model;
-
 import org.junit.*;
 
 public class ContactManagerTest {

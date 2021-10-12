@@ -1,5 +1,4 @@
 package com.paradigm_shifters.Randevu.model;
-
 import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
