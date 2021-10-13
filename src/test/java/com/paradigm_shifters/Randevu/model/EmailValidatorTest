@@ -1,0 +1,91 @@
+package com.paradigm_shifters.Randevu.model;
+import org.junit.Assert;
+import org.junit.Test;
+
+class EmailValidatorTest{
+@Test
+
+    public void isInvalidEmail(String email) {
+        EmailValidatorTest validator = new EmailValidatorTest();
+        Assert.assertFalse(email + " should be an invalid email", validator.isValid(email));
+    }
+
+    
+    public static Object[][] validEmailsProvider() {
+        return new Object[][] {
+                {"example@example.com"},
+                {"example@example.co.uk"},
+                {"example_underscore@example.fr"},
+                {"example@localhost"},
+                {"exam'ple@example.com"},
+                {String.format("exam\\%sple@example.com", " ")},
+                {"example((example))@fakedfake.co.uk"},
+                {"example@faked(fake).co.uk"},
+                {"example+@example.com"},
+                {"example@with-hyphen.example.com"},
+                {"with-hyphen@example.com"},
+                {"example@1leadingnum.example.com"},
+                {"1leadingnum@example.com"},
+                {"инфо@письмо.рф"},
+                {"\"username\"@example.com"},
+                {"\"user,name\"@example.com"},
+                {"\"user name\"@example.com"},
+                {"\"user@name\"@example.com"},
+                {"\"\\a\"@iana.org"},
+                {"\"test\\ test\"@iana.org"},
+                {"\"\"@iana.org"},
+                {"\"\"@[]"}/* kind of an edge case, valid for RFC 5322 but address literal is not for 5321 */,
+                {String.format("\"\\%s\"@iana.org", "\"")},
+        };
+    }
+
+    @Test
+
+    public void isValidEmail(String validEmail) {
+        EmailValidatorTest validator = new EmailValidatorTest();
+        Assert.assertTrue(validEmail + " should be a valid email", validator.isValid(validEmail));
+    }
+
+    @Test
+    public void validEmailHasNoWarnings() {
+        EmailValidatorTest validator = new EmailValidatorTest();
+        validator.isValid("test@example.com");
+        Assert.assertFalse(validator.hasWarnings());
+    }
+
+    @Test
+    public void preventNull() {
+        EmailValidatorTest validator = new EmailValidatorTest();
+        Assert.assertFalse(validator.isValid(null));
+    }
+
+    @Test
+    public void validEmailHasWarnings() {
+        EmailValidatorTest validator = new EmailValidatorTest();
+        validator.isValid("test@[127.0.0.0]");
+        Assert.assertTrue(validator.hasWarnings());
+    }
+
+    private boolean hasWarnings() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Test
+    public void warningsAreExposed() {
+        EmailValidatorTest validator = new EmailValidatorTest();
+        validator.isValid("test@[127.0.0.0]");
+        Assert.assertFalse(validator.getWarnings().isEmpty());
+    }
+
+	private String getWarnings() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private boolean isValid(String string) {
+		return true;
+		// TODO Auto-generated method stub
+		
+	}
+}
