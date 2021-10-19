@@ -12,7 +12,7 @@ public class HomeController {
 
     @RequestMapping("/HomePage")
     public String HomePage() {
-        return "RandevuHomepage";
+        return "RandevuHomePage";
     }
     
     @RequestMapping("/SearchPage")
@@ -22,7 +22,6 @@ public class HomeController {
     
     @GetMapping("/redirect1")
     public ModelAndView redirect1(ModelMap model) {
-        //model.addAttribute("attribute", "redirectWithRedirectPrefix");
         return new ModelAndView("redirect:/HomePage", model);
     }
     
