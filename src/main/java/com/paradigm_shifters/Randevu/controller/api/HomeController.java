@@ -30,4 +30,9 @@ public class HomeController {
         return new ModelAndView("redirect:/SearchPage", model);
     }
     
+    @RequestMapping("/resources/first.css")
+    public String firstCSS() {
+        return "../static/first.css";
+    }
+    
 }
