@@ -22,4 +22,10 @@ public class HelloWorldController {
     public HelloWorldBean helloWorldBean() {
         return new HelloWorldBean("Hello World");
     }
+
+    //hello-world/path-variable/dany
+    @GetMapping(path = "/hello-world/path-variable/{name}")
+    public HelloWorldBean helloWorldBean() {
+        return new HelloWorldBean("Hello World");
+    }
 }
