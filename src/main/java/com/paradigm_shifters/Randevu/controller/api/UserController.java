@@ -1,6 +1,7 @@
 package com.paradigm_shifters.Randevu.controller.api;
 
 import com.paradigm_shifters.Randevu.dao.UserDaoService;
+import com.paradigm_shifters.Randevu.exception.UserNotFoundException;
 import com.paradigm_shifters.Randevu.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-public class UserResource {
+public class UserController {
 
     @Autowired
     private UserDaoService service;
