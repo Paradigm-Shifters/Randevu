@@ -1,9 +1,6 @@
 package com.paradigm_shifters.Randevu.controller.api;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 //Controller
 @RestController
@@ -25,7 +22,7 @@ public class HelloWorldController {
 
     //hello-world/path-variable/dany
     @GetMapping(path = "/hello-world/path-variable/{name}")
-    public HelloWorldBean helloWorldBean() {
-        return new HelloWorldBean("Hello World");
+    public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+        return new HelloWorldBean(String.format("Hello World, %s", name));
     }
 }
