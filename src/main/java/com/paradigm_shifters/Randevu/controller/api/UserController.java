@@ -3,7 +3,7 @@ package com.paradigm_shifters.Randevu.controller.api;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import com.paradigm_shifters.Randevu.dao.UserDaoService;
-import com.paradigm_shifters.Randevu.exception.UserNotFoundException;
+import com.paradigm_shifters.Randevu.controller.exception.UserNotFoundException;
 import com.paradigm_shifters.Randevu.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;

@@ -1,4 +1,4 @@
-package com.paradigm_shifters.Randevu.exception;
+package com.paradigm_shifters.Randevu.controller.exception;
 
 import com.paradigm_shifters.Randevu.controller.api.ExceptionResponse;
 import org.springframework.http.HttpHeaders;

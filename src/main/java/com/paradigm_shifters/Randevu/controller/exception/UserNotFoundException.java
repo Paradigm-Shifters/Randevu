@@ -1,4 +1,4 @@
-package com.paradigm_shifters.Randevu.exception;
+package com.paradigm_shifters.Randevu.controller.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
