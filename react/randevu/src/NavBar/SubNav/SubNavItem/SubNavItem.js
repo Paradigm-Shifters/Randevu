@@ -3,6 +3,7 @@ import styles from './SubNavItem.module.css';
 
 export function SubNavItem(props) {
     const borderClass = props.showRightBorder ? styles['right-border'] : '';
+    const hoverText = props.text;
     return (
         <div className="dropdown is-hoverable">
             <div className="dropdown-trigger">
@@ -17,7 +18,7 @@ export function SubNavItem(props) {
             <div className="dropdown-menu" id="dropdown-menu4" role="menu">
                 <div className="dropdown-content">
                 <div className="dropdown-item">
-                    <p>You can insert <strong>any type of content</strong> within the dropdown menu.</p>
+                    <p>{hoverText}</p>
                 </div>
                 </div>
             </div>

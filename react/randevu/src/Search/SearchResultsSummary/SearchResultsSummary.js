@@ -29,8 +29,8 @@ export function SearchResultsSummary(props) {
                     <span>Open Now</span>
                 </button>
                 <button className="button">
-                    <span className="icon"><i className="fas fa-dollar-sign"></i></span>
-                    <span>Cashback</span>
+                    <span className="icon"><i className="fas fa-user-friends"></i></span>
+                    <span>Date Ideas</span>
                 </button>
             </div>
         </div>

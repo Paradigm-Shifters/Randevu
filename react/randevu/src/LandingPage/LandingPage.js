@@ -20,9 +20,19 @@ export const LandingPage = () => {
         <div className={styles.landing}>
             <div className={styles['search-area']}>
                 <TopNav/>
-                <img src={RandevuLogo} className={styles.logo} alt='logo'/>
+                <div>
+                    <img src={RandevuLogo} className={styles.logo} alt='logo'/>
+                </div>
                 <SearchBar search={search} />
                 <SearchSuggestions/>
+                <br></br>
+                <a href='https://cors-anywhere.herokuapp.com/corsdemo' target='_blank' rel='noreferrer' back>
+                    <button className='button is-large'>
+                        <span>Enable API Calls</span>
+                    </button>
+                </a>
+                <br></br>
+                <span><b>In order to enable API calls, you must click this button and then the button you are redirected to.</b></span>
             </div>
         </div>
 
