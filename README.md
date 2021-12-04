@@ -6,12 +6,14 @@
   --See the fastest route to take and estimated time of arrival on Google Maps with the click of another button  
   
   Check it out! Deployed URL: https://randevu-cs4800.netlify.app/
-  
+ 
+ 
  IMPORTANT:
  ----------------------------------------------------------------------------------
  The page that displays the search results will show a loading symbol indefinitely if API calls haven't been enabled by the user.  
- Make sure to click the button at the bottom of the main search page and then the button it redirects to, this will instantly enable search results to show.  
-            
+ Make sure to click the button at the bottom of the main search page and then the button it redirects to, this will instantly enable search results to show.
+ 
+ 
  The features listed below are still in the DEVELOPMENT stage and are not working in deployment:
  ----------------------------------------------------------------------------------
   ---buttons at the top of the main search page and buttons directly beneath search bar  
