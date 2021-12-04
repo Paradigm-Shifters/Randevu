@@ -1,5 +1,6 @@
 # Randevu
- Randevu is an activity search web-service that helps you find things to do and places to stay in your area (or any area)!  
+ Randevu is an activity search web-service that helps you find things to do and places to stay in your area (or any area)! 
+ 
   --Shows search results and relevant data such as reviews, price ranges, and contact information  
   --Plan events by creating Google Calendar reminders with the click of a button  
   --See the fastest route to take and estimated time of arrival on Google Maps with the click of another button  
